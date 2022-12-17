@@ -8,7 +8,7 @@ export default function Rooms() {
 		{
 			_id: "638fd4ea05859e72995ac03d",
 			name: "Living Room",
-			address: "25kWh",
+			address: "450Wh",
 			contactNumber: "ezfz",
 			createdAt: "2022-12-06T23:48:58.732Z",
 			updatedAt: "2022-12-06T23:48:58.732Z",
@@ -18,7 +18,7 @@ export default function Rooms() {
 		{
 			_id: "638fd4e605859e72995ac036",
 			name: "Kitchen",
-			address: "25kWh",
+			address: "840Wh",
 			contactNumber: "fzef",
 			createdAt: "2022-12-06T23:48:54.024Z",
 			updatedAt: "2022-12-06T23:48:54.024Z",
@@ -28,7 +28,7 @@ export default function Rooms() {
 		{
 			_id: "638fd4e305859e72995ac033",
 			name: "Bedroom",
-			address: "25kWh",
+			address: "230Wh",
 			contactNumber: "fzef",
 			createdAt: "2022-12-06T23:48:51.468Z",
 			updatedAt: "2022-12-06T23:48:51.468Z",
@@ -39,7 +39,7 @@ export default function Rooms() {
 		{
 			_id: "638fd4e305859e72995ac033",
 			name: "Kids bedroom",
-			address: "25kWh",
+			address: "310Wh",
 			contactNumber: "fzef",
 			createdAt: "2022-12-06T23:48:51.468Z",
 			updatedAt: "2022-12-06T23:48:51.468Z",
@@ -50,7 +50,7 @@ export default function Rooms() {
 		{
 			_id: "638fd4e305859e72995ac033",
 			name: "Master Bedroom",
-			address: "25kWh",
+			address: "290Wh",
 			contactNumber: "fzef",
 			createdAt: "2022-12-06T23:48:51.468Z",
 			updatedAt: "2022-12-06T23:48:51.468Z",

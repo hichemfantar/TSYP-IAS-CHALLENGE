@@ -16,6 +16,8 @@ const CreateShop = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
+		toast.success("Device added successfully");
+		return;
 		if (!user) {
 			setError("You must be logged in");
 			return;
@@ -62,7 +64,7 @@ const CreateShop = () => {
 					<h1 className="mb-3 text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">
 						Add a device to your home
 					</h1>
-					<form className="mt-8" onSubmit={handleSubmit}>
+					<form className="mt-8" onSubmit={handleSubmit} noValidate>
 						<div className="mb-6">
 							<label
 								htmlFor="email"

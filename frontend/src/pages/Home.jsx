@@ -54,7 +54,7 @@ const Home = () => {
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Kids Room</span>
-					<span className="text-xl font-bold">298Wh</span>
+					<span className="text-xl font-bold">310Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Kitchen</span>

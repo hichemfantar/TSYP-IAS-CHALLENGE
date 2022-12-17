@@ -8,7 +8,7 @@ export default function Shops() {
 		{
 			_id: "638fd4ea05859e72995ac03d",
 			name: "Samsung Fridge",
-			address: "25kWh",
+			address: "250Wh",
 			contactNumber: "ezfz",
 			createdAt: "2022-12-06T23:48:58.732Z",
 			updatedAt: "2022-12-06T23:48:58.732Z",
@@ -18,7 +18,7 @@ export default function Shops() {
 		{
 			_id: "638fd4e605859e72995ac036",
 			name: "DLink Router",
-			address: "25kWh",
+			address: "10Wh",
 			contactNumber: "fzef",
 			createdAt: "2022-12-06T23:48:54.024Z",
 			updatedAt: "2022-12-06T23:48:54.024Z",
@@ -28,7 +28,7 @@ export default function Shops() {
 		{
 			_id: "638fd4e305859e72995ac033",
 			name: "Xiaomi TV",
-			address: "25kWh",
+			address: "250Wh",
 			contactNumber: "fzef",
 			createdAt: "2022-12-06T23:48:51.468Z",
 			updatedAt: "2022-12-06T23:48:51.468Z",
@@ -39,7 +39,7 @@ export default function Shops() {
 		{
 			_id: "638fd34095e812729b29ef55",
 			name: "Heating System",
-			address: "25kWh",
+			address: "2900Wh",
 			contactNumber: "rgdazd",
 			pic: "https://www.thespruce.com/thmb/uCAFtGxJOnWHGnTQih67o7rMO3g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-types-of-air-conditioning-systems-work-1824734-hero-740003052ebb4bebb5dd9b42e441c118.jpg",
 			createdAt: "2022-12-06T23:41:52.807Z",
@@ -49,7 +49,7 @@ export default function Shops() {
 		{
 			_id: "638fd32195e812729b29ef52",
 			name: "Security Camera",
-			address: "25kWh",
+			address: "10Wh",
 			pic: "https://www.gensecurity.com/hubfs/Blog/White%20male%20adjusting%20smart%20camera%20and%20monitoring%20camera%20on%20his%20phone%20on%20the%20couch.jpg",
 			contactNumber: "rg",
 			createdAt: "2022-12-06T23:41:21.086Z",

@@ -44,29 +44,27 @@ function App() {
 							/>
 							<Route
 								path="/associations"
-								element={user ? <Associations /> : <Navigate to="/login" />}
+								element={user ? <Associations /> : <Donations />}
 							/>
 							<Route
 								path="/my-donations"
-								element={user ? <Donations /> : <Navigate to="/login" />}
+								element={user ? <Donations /> : <Donations />}
 							/>
 							<Route
 								path="/make-donation"
-								element={user ? <MakeDonation /> : <Navigate to="/login" />}
+								element={user ? <MakeDonation /> : <MakeDonation />}
 							/>
 							<Route
 								path="/add-device"
-								element={user ? <CreateShop /> : <Navigate to="/login" />}
+								element={user ? <CreateShop /> : <CreateShop />}
 							/>
 							<Route
 								path="/add-room"
-								element={user ? <CreateRoom /> : <Navigate to="/login" />}
+								element={user ? <CreateRoom /> : <CreateRoom />}
 							/>
 							<Route
 								path="/add-association"
-								element={
-									user ? <CreateAssociation /> : <Navigate to="/login" />
-								}
+								element={user ? <CreateAssociation /> : <CreateAssociation />}
 							/>
 							<Route
 								path="/login"
