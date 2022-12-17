@@ -7,7 +7,7 @@ export default function SideNav() {
 
 	return (
 		<aside className="w-full h-full" aria-label="Sidenav">
-			<div className="overflow-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+			<div className="overflow-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-green-800 dark:border-gray-700 ">
 				<div>
 					<h1 className="text-center text-xl font-semibold whitespace-nowrap dark:text-white mb-4">
 						IAS
@@ -18,7 +18,7 @@ export default function SideNav() {
 					<li>
 						<Link
 							to="/"
-							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-green-100 dark:hover:bg-green-700 group"
 						>
 							<svg
 								aria-hidden="true"
@@ -37,7 +37,7 @@ export default function SideNav() {
 					<li>
 						<Link
 							to="/devices"
-							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-green-100 dark:hover:bg-green-700 group"
 						>
 							<svg
 								aria-hidden="true"
@@ -55,7 +55,7 @@ export default function SideNav() {
 					<li>
 						<Link
 							to="/rooms"
-							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-green-100 dark:hover:bg-green-700 group"
 						>
 							<svg
 								aria-hidden="true"
@@ -73,7 +73,7 @@ export default function SideNav() {
 					<li>
 						<Link
 							to="/"
-							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-green-100 dark:hover:bg-green-700 group"
 						>
 							<svg
 								aria-hidden="true"
@@ -93,7 +93,7 @@ export default function SideNav() {
 					<li>
 						<a
 							href="#"
-							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-green-100 dark:hover:bg-green-700 dark:text-white group"
 						>
 							<svg
 								aria-hidden="true"
@@ -116,7 +116,7 @@ export default function SideNav() {
 					<li>
 						<a
 							href="#"
-							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-green-100 dark:hover:bg-green-700 dark:text-white group"
 						>
 							<svg
 								aria-hidden="true"
@@ -136,10 +136,10 @@ export default function SideNav() {
 					</li>
 				</ul>
 
-				<div className="hidden justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800">
+				<div className="hidden justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-green-800">
 					<a
 						href="#"
-						className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
+						className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-green-100 dark:hover:bg-green-600"
 					>
 						<svg
 							aria-hidden="true"
@@ -154,7 +154,7 @@ export default function SideNav() {
 					<a
 						href="#"
 						data-tooltip-target="tooltip-settings"
-						className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+						className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-green-100 dark:hover:bg-green-600"
 					>
 						<svg
 							aria-hidden="true"
@@ -173,7 +173,7 @@ export default function SideNav() {
 					<div
 						id="tooltip-settings"
 						role="tooltip"
-						className="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip"
+						className="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-green-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip"
 					>
 						Settings page
 						<div className="tooltip-arrow" data-popper-arrow="" />
@@ -181,7 +181,7 @@ export default function SideNav() {
 					<button
 						type="button"
 						data-dropdown-toggle="language-dropdown"
-						className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+						className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-green-100 dark:hover:bg-green-600"
 					>
 						<img
 							className="w-6 h-6 rounded-full shadow-lg object-cover"
@@ -191,14 +191,14 @@ export default function SideNav() {
 					</button>
 					{/* Dropdown */}
 					<div
-						className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+						className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-green-700"
 						id="language-dropdown"
 					>
 						<ul className="py-1" role="none">
 							<li>
 								<a
 									href="#"
-									className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
+									className="block py-2 px-4 text-sm text-gray-700 hover:bg-green-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-green-600"
 									role="menuitem"
 								>
 									<div className="inline-flex items-center">
@@ -241,7 +241,7 @@ export default function SideNav() {
 							<li>
 								<a
 									href="#"
-									className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
+									className="block py-2 px-4 text-sm text-gray-700 hover:bg-green-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-green-600"
 									role="menuitem"
 								>
 									<div className="inline-flex items-center">
@@ -263,7 +263,7 @@ export default function SideNav() {
 							<li>
 								<a
 									href="#"
-									className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
+									className="block py-2 px-4 text-sm text-gray-700 hover:bg-green-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-green-600"
 									role="menuitem"
 								>
 									<div className="inline-flex items-center">
@@ -287,7 +287,7 @@ export default function SideNav() {
 							<li>
 								<a
 									href="#"
-									className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
+									className="block py-2 px-4 text-sm text-gray-700 hover:bg-green-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-green-600"
 									role="menuitem"
 								>
 									<div className="inline-flex items-center">
