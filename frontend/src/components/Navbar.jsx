@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
+import LogoIAS from "../IAS-LOGO.png";
 
 const Navbar = () => {
 	const { logout } = useLogout();
@@ -14,17 +15,30 @@ const Navbar = () => {
 		<header className="w-full sticky top-0 overflow-auto z-10 shadow">
 			<nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
 				<div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-					<Link to="/" className="flex items-center">
-						{/* <img src="" className="mr-3 h-6 sm:h-9" alt="Logo" /> */}
-						<span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+					{/* <Link to="/" className="flex items-center"> */}
+					{/* <img src="" className="mr-3 h-6 sm:h-9" alt="Logo" /> */}
+					<div>
+						<input
+							type="text"
+							required
+							name="title"
+							id="name"
+							placeholder="Search"
+							className="hidden lg:block w-96 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						/>
+					</div>
+					<div className="w-full flex justify-center mb-4 lg:hidden">
+						<img src={LogoIAS} alt="" className="h-16 w-h-16 object-contain" />
+					</div>
+					{/* <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
 							IAS
-						</span>
-					</Link>
+						</span> */}
+					{/* </Link> */}
 					<div className="flex items-center lg:order-2">
 						{user && (
 							<button
 								onClick={handleClick}
-								className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+								className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800"
 							>
 								Log out
 							</button>
@@ -39,7 +53,7 @@ const Navbar = () => {
 								</Link>
 								<Link
 									to="/signup"
-									className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+									className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800"
 								>
 									Get started
 								</Link>

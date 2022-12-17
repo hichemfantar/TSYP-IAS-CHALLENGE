@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../hooks/useAuthContext";
+import { BiDevices } from "react-icons/bi";
+import { RiDeviceFill } from "react-icons/ri";
+import { FaBed } from "react-icons/fa";
+import { IoIosBed } from "react-icons/io";
+import { MdSecurity } from "react-icons/md";
+import LogoIAS from "../IAS-LOGO.png";
 
 export default function SideNav() {
 	const { user } = useAuthContext();
@@ -9,9 +15,12 @@ export default function SideNav() {
 		<aside className="w-full h-full" aria-label="Sidenav">
 			<div className="overflow-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-green-800 dark:border-gray-700 ">
 				<div>
-					<h1 className="text-center text-xl font-semibold whitespace-nowrap dark:text-white mb-4">
+					<div className="w-full flex justify-center mb-4">
+						<img src={LogoIAS} alt="" className="h-20 w-h-20 object-contain" />
+					</div>
+					{/* <h1 className="text-center text-xl font-semibold whitespace-nowrap dark:text-white mb-4">
 						IAS
-					</h1>
+					</h1> */}
 				</div>
 
 				<ul className="space-y-2">
@@ -22,7 +31,7 @@ export default function SideNav() {
 						>
 							<svg
 								aria-hidden="true"
-								className="w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+								className="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
 								fill="currentColor"
 								viewBox="0 0 20 20"
 								xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +48,10 @@ export default function SideNav() {
 							to="/devices"
 							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-green-100 dark:hover:bg-green-700 group"
 						>
-							<svg
+							<div className="text-gray-500">
+								<RiDeviceFill size={24} />
+							</div>
+							{/* <svg
 								aria-hidden="true"
 								className="w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
 								fill="currentColor"
@@ -48,7 +60,7 @@ export default function SideNav() {
 							>
 								<path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
 								<path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
-							</svg>
+							</svg> */}
 							<span className="ml-3">Devices</span>
 						</Link>
 					</li>
@@ -57,7 +69,10 @@ export default function SideNav() {
 							to="/rooms"
 							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-green-100 dark:hover:bg-green-700 group"
 						>
-							<svg
+							<div className="text-gray-500">
+								<IoIosBed size={24} />
+							</div>
+							{/* <svg
 								aria-hidden="true"
 								className="w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
 								fill="currentColor"
@@ -66,7 +81,7 @@ export default function SideNav() {
 							>
 								<path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
 								<path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
-							</svg>
+							</svg> */}
 							<span className="ml-3">Rooms</span>
 						</Link>
 					</li>
@@ -75,7 +90,10 @@ export default function SideNav() {
 							to="/"
 							className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-green-100 dark:hover:bg-green-700 group"
 						>
-							<svg
+							<div className="text-gray-500">
+								<MdSecurity size={24} />
+							</div>
+							{/* <svg
 								aria-hidden="true"
 								className="w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
 								fill="currentColor"
@@ -84,7 +102,7 @@ export default function SideNav() {
 							>
 								<path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
 								<path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
-							</svg>
+							</svg> */}
 							<span className="ml-3">Security</span>
 						</Link>
 					</li>
