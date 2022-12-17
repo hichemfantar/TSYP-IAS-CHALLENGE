@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ShopsList({
+export default function RoomsList({
 	name,
 	contactNumber,
 	address,
@@ -77,9 +77,9 @@ export default function ShopsList({
 				<span className="text-sm text-gray-500 dark:text-gray-400">
 					{address || "474 Boston Post Rd, North Windham"}
 				</span>
-				{/* <span className="text-sm text-gray-500 dark:text-gray-400">
+				<span className="text-sm text-gray-500 dark:text-gray-400">
 					{contactNumber || "474 Boston Post Rd, North Windham"}
-				</span> */}
+				</span>
 				<div className="flex mt-4 space-x-3 md:mt-6">
 					<a
 						href="#"

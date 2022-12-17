@@ -21,7 +21,7 @@ const Signup = () => {
 					href="/"
 				>
 					{/* <img/> */}
-					<span className="ml-3">SIGHT</span>
+					<span className="ml-3">IAS</span>
 				</a>
 				<div className="justify-center items-center w-full bg-white rounded-lg shadow lg:flex md:mt-0 lg:max-w-screen-sm xl:p-0 dark:bg-gray-800">
 					<div className="p-6 w-full sm:p-8 lg:p-10">

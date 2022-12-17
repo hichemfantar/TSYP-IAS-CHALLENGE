@@ -15,6 +15,8 @@ import "react-toastify/dist/ReactToastify.css";
 import CreateShop from "./pages/CreateShop";
 import Associations from "./pages/Associations";
 import CreateAssociation from "./pages/CreateAssociation";
+import Rooms from "./pages/Rooms";
+import CreateRoom from "./pages/CreateRoom";
 
 function App() {
 	const { user } = useAuthContext();
@@ -25,13 +27,20 @@ function App() {
 				<main className="bg-gray-50 dark:bg-gray-900">
 					<AppLayout>
 						<Routes>
-							<Route
+							<Route path="/" element={<Home />} />
+							{/* <Route
 								path="/"
 								element={user ? <Home /> : <Navigate to="/login" />}
+							/> */}
+							<Route
+								path="/devices"
+								element={<Shops />}
+								// element={user ? <Shops /> : <Navigate to="/login" />}
 							/>
 							<Route
-								path="/shops"
-								element={user ? <Shops /> : <Navigate to="/login" />}
+								path="/rooms"
+								element={<Rooms />}
+								// element={user ? <Shops /> : <Navigate to="/login" />}
 							/>
 							<Route
 								path="/associations"
@@ -46,8 +55,12 @@ function App() {
 								element={user ? <MakeDonation /> : <Navigate to="/login" />}
 							/>
 							<Route
-								path="/add-shop"
+								path="/add-device"
 								element={user ? <CreateShop /> : <Navigate to="/login" />}
+							/>
+							<Route
+								path="/add-room"
+								element={user ? <CreateRoom /> : <Navigate to="/login" />}
 							/>
 							<Route
 								path="/add-association"

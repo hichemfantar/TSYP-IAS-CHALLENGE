@@ -10,7 +10,7 @@ import ShopsList from "../components/ShopsList";
 
 const Home = () => {
 	const [donations, setDonations] = useState([]);
-
+	const [intensity, setIntensity] = useState(50);
 	const { user } = useAuthContext();
 
 	useEffect(() => {
@@ -36,9 +36,7 @@ const Home = () => {
 				<div className="bg-[#ddeafa] col-span-12 lg:col-span-12 flex flex-col gap-2 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Welcome back!</span>
 					<span className="text-xl">
-						We are a nonprofit that connects donors with grassroots projects
-						around the world. Donate to charity and see your impact with regular
-						updates.
+						Your energy consumption is operating at optimal levels.
 					</span>
 					<div>
 						<button className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
@@ -46,22 +44,56 @@ const Home = () => {
 						</button>
 					</div>
 				</div>
-				<div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Total users</span>
-					<span className="text-xl font-bold">1,752</span>
+				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Living Room</span>
+					<span className="text-xl font-bold">174kWh</span>
 				</div>
-				<div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Total donations</span>
-					<span className="text-xl font-bold">
-						{Intl.NumberFormat().format(donations) || "18,646"} TND
-					</span>
+				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Bedroom</span>
+					<span className="text-xl font-bold">196kWh</span>
 				</div>
-				<div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Total volunteers</span>
-					<span className="text-xl font-bold">468</span>
+				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Study Room</span>
+					<span className="text-xl font-bold">289kWh</span>
+				</div>
+				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Kitchen</span>
+					<span className="text-xl font-bold">201kWh</span>
+				</div>
+				<div className="col-span-12 lg:col-span-4 lg:row-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					{/* <span className="text-xl font-semibold">Welcome Annie</span> */}
+					<span className="text-xl font-semibold">My devices</span>
+					{/* <span className="text-xl font-bold">201kWh</span> */}
+
+					<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+						<div>AC</div>
+						<div>Router</div>
+						<div>Music System</div>
+						<div>Lamps</div>
+					</div>
 				</div>
 
-				<div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Temperature</span>
+					<span className="text-xl font-bold">+25c</span>
+				</div>
+				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Humidity</span>
+					<span className="text-xl font-bold">30%</span>
+				</div>
+				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Light Intensity</span>
+					<span className="text-xl font-bold">{intensity}%</span>
+					<input
+						type="range"
+						min="1"
+						max="100"
+						value={intensity}
+						onChange={(e) => setIntensity(e.target.value)}
+					/>
+				</div>
+
+				{/* <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<div className="flex flex-col gap-2">
 						<span className="text-xl font-semibold">Active user ages</span>
 					</div>
@@ -106,10 +138,11 @@ const Home = () => {
 						// width="500"
 						// height="600"
 					/>
-				</div>
-				<div className="col-span-12 lg:col-span-8 flex flex-col gap-4 p-4 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+				</div> */}
+
+				<div className="col-span-12 lg:col-span-12 flex flex-col gap-4 p-4 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<div className="flex flex-col gap-2">
-						<span className="text-xl font-semibold">Donation timeline</span>
+						<span className="text-xl font-semibold">Spending</span>
 					</div>
 					<Chart
 						className=""
@@ -144,11 +177,31 @@ const Home = () => {
 						}}
 						series={[
 							{
-								name: "series1",
+								name: "Monday",
 								data: [31, 40, 28, 51, 42, 109, 100],
 							},
 							{
-								name: "series2",
+								name: "Tuesday",
+								data: [11, 32, 45, 32, 34, 52, 41],
+							},
+							{
+								name: "Wednesday",
+								data: [11, 32, 45, 32, 34, 52, 41],
+							},
+							{
+								name: "Thursday",
+								data: [11, 32, 45, 32, 34, 52, 41],
+							},
+							{
+								name: "Friday",
+								data: [11, 32, 45, 32, 34, 52, 41],
+							},
+							{
+								name: "Saturday",
+								data: [11, 32, 45, 32, 34, 52, 41],
+							},
+							{
+								name: "Sunday",
 								data: [11, 32, 45, 32, 34, 52, 41],
 							},
 						]}

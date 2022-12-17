@@ -8,14 +8,14 @@ export default function AppLayout({ children }) {
 
 	return (
 		<div className="">
-			{user && (
-				<div className="hidden lg:fixed lg:top-0 lg:block h-screen overflow-auto w-64">
-					<SideNav />
-				</div>
-			)}
+			{/* {user && ( */}
+			<div className="hidden lg:fixed lg:top-0 lg:block h-screen overflow-auto w-64">
+				<SideNav />
+			</div>
+			{/* )} */}
 
 			<div>
-				<div className={`${user ? "lg:ml-64" : ""}`}>
+				<div className={`${user ? "lg:ml-64" : "lg:ml-64"}`}>
 					<Navbar />
 
 					{children}

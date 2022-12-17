@@ -17,7 +17,7 @@ const Navbar = () => {
 					<Link to="/" className="flex items-center">
 						{/* <img src="" className="mr-3 h-6 sm:h-9" alt="Logo" /> */}
 						<span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-							SIGHT
+							IAS
 						</span>
 					</Link>
 					<div className="flex items-center lg:order-2">
@@ -85,7 +85,7 @@ const Navbar = () => {
 						id="mobile-menu-2"
 					>
 						<ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-							<li>
+							{/* <li>
 								<a
 									href="#"
 									className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
@@ -109,7 +109,7 @@ const Navbar = () => {
 								>
 									Contact
 								</a>
-							</li>
+							</li> */}
 						</ul>
 					</div>
 				</div>
