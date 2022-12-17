@@ -46,19 +46,19 @@ const Home = () => {
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Living Room</span>
-					<span className="text-xl font-bold">174kWh</span>
+					<span className="text-xl font-bold">450Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Bedroom</span>
-					<span className="text-xl font-bold">196kWh</span>
+					<span className="text-xl font-bold">230Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Study Room</span>
-					<span className="text-xl font-bold">289kWh</span>
+					<span className="text-xl font-semibold">Kids Room</span>
+					<span className="text-xl font-bold">298Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Kitchen</span>
-					<span className="text-xl font-bold">201kWh</span>
+					<span className="text-xl font-bold">840Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-4 lg:row-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					{/* <span className="text-xl font-semibold">Welcome Annie</span> */}
@@ -81,7 +81,7 @@ const Home = () => {
 					<span className="text-xl font-semibold">Humidity</span>
 					<span className="text-xl font-bold">30%</span>
 				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+				<div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Light Intensity</span>
 					<span className="text-xl font-bold">{intensity}%</span>
 					<input
