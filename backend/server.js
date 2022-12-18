@@ -20,25 +20,25 @@ app.use((req, res, next) => {
 	next();
 });
 
-if (typeof web3 !== "undefined") {
-	var web3 = new Web3(web3.currentProvider);
-} else {
-	var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
-}
+// if (typeof web3 !== "undefined") {
+// 	var web3 = new Web3(web3.currentProvider);
+// } else {
+// 	var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
+// }
 
 // routes
-app.use("/api/shops", shopRoutes);
-app.use("/api/donations", donationRoutes);
+// app.use("/api/shops", shopRoutes);
+// app.use("/api/donations", donationRoutes);
 app.use("/api/user", userRoutes);
-app.use("/api/associations", associationRoutes);
+// app.use("/api/associations", associationRoutes);
 
 // connect to db
 mongoose
 	.connect(process.env.MONGO_URI)
 	.then(async () => {
-		const accounts = await web3.eth.getAccounts();
-		console.log(accounts);
-		const donationList = new web3.eth.Contract(DONATION_ABI, DONATION_ADDRESS);
+		// const accounts = await web3.eth.getAccounts();
+		// console.log(accounts);
+		// const donationList = new web3.eth.Contract(DONATION_ABI, DONATION_ADDRESS);
 		// console.log(donationList);
 
 		// listen for requests
