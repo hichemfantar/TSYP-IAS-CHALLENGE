@@ -17,6 +17,8 @@ import Associations from "./pages/Associations";
 import CreateAssociation from "./pages/CreateAssociation";
 import Rooms from "./pages/Rooms";
 import CreateRoom from "./pages/CreateRoom";
+import MachineDetails from "./pages/MachineDetails";
+import MeetDetails from "./pages/MeetDetails";
 
 function App() {
 	const { user } = useAuthContext();
@@ -58,6 +60,11 @@ function App() {
 								path="/add-device"
 								element={user ? <CreateShop /> : <CreateShop />}
 							/>
+							<Route
+								path="/meeting"
+								element={user ? <MeetDetails /> : <MeetDetails />}
+							/>
+							<Route path="/machines/:id" element={<MachineDetails />} />
 							<Route
 								path="/add-room"
 								element={user ? <CreateRoom /> : <CreateRoom />}
