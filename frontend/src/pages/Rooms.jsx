@@ -86,6 +86,12 @@ export default function Rooms() {
 				<div className="col-span-12 lg:col-span-12 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<div className="flex flex-wrap justify-between">
 						<span className="text-xl font-semibold">My Rooms</span>
+						<Link to="/add-room">
+							<button className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">
+								{/* <button className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800"> */}
+								Add a room
+							</button>
+						</Link>
 					</div>
 
 					<div className="grid grid-cols-12 gap-4 dark:text-white">

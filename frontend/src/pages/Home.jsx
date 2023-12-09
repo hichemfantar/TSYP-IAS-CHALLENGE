@@ -45,41 +45,41 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Boiler Room</span>
+					<span className="text-xl font-semibold">Living Room</span>
 					<span className="text-xl font-bold">450Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Car assembly</span>
+					<span className="text-xl font-semibold">Bedroom</span>
 					<span className="text-xl font-bold">230Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Silicon Refinement</span>
+					<span className="text-xl font-semibold">Kids Room</span>
 					<span className="text-xl font-bold">310Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Repairs Garage</span>
+					<span className="text-xl font-semibold">Kitchen</span>
 					<span className="text-xl font-bold">840Wh</span>
 				</div>
 				<div className="col-span-12 lg:col-span-4 lg:row-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					{/* <span className="text-xl font-semibold">Welcome Annie</span> */}
-					<span className="text-xl font-semibold">My top used rooms</span>
+					<span className="text-xl font-semibold">My devices</span>
 					{/* <span className="text-xl font-bold">201kWh</span> */}
 
 					<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-						<div>Repairs Garage</div>
-						<div>Boiler Room</div>
-						<div>Silicon Refinement</div>
-						<div>Car assembly</div>
+						<div>AC</div>
+						<div>Router</div>
+						<div>Music System</div>
+						<div>Lamps</div>
 					</div>
 				</div>
 
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Temperature</span>
-					<span className="text-xl font-bold">+35c</span>
+					<span className="text-xl font-bold">+25c</span>
 				</div>
 				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Humidity</span>
-					<span className="text-xl font-bold">5%</span>
+					<span className="text-xl font-bold">30%</span>
 				</div>
 				<div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Light Intensity</span>
