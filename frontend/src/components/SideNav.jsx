@@ -19,7 +19,7 @@ export default function SideNav() {
 						<img src={logo} alt="" className="h-10 w-10 object-contain" />
 					</div>
 					<h1 className="text-cener text-xl font-semibold whitespace-nowrap dark:text-white mb-4">
-						HAI
+						Project HAI
 					</h1>
 				</div>
 

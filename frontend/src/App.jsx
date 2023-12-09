@@ -17,6 +17,7 @@ import Associations from "./pages/Associations";
 import CreateAssociation from "./pages/CreateAssociation";
 import Rooms from "./pages/Rooms";
 import CreateRoom from "./pages/CreateRoom";
+import { PatientDetails } from "./pages/patientdetails";
 
 function App() {
 	const { user } = useAuthContext();
@@ -35,6 +36,11 @@ function App() {
 							<Route
 								path="/devices"
 								element={<Shops />}
+								// element={user ? <Shops /> : <Navigate to="/login" />}
+							/>
+							<Route
+								path="/patient-details"
+								element={<PatientDetails />}
 								// element={user ? <Shops /> : <Navigate to="/login" />}
 							/>
 							<Route

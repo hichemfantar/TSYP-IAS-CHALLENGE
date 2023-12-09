@@ -1,218 +1,190 @@
-import { useEffect, useState } from "react";
-import { useDonationsContext } from "../hooks/useDonationsContext";
+import { useEffect, useRef, useState } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 // components
-import DonationDetails from "../components/DonationDetails";
-import DonationForm from "../components/DonationForm";
 import Chart from "react-apexcharts";
-import ShopsList from "../components/ShopsList";
+import { faker } from "@faker-js/faker";
 
-const PatientDetails = () => {
-	const [donations, setDonations] = useState([]);
-	const [intensity, setIntensity] = useState(50);
-	const { user } = useAuthContext();
-
-	useEffect(() => {
-		const fetchDonations = async () => {
-			const response = await fetch("/api/donations", {
-				headers: { Authorization: `Bearer ${user.token}` },
-			});
-			const json = await response.json();
-
-			if (response.ok) {
-				setDonations(json);
-			}
-		};
-
-		if (user) {
-			fetchDonations();
-		}
-	}, [user]);
+export const PatientDetails = () => {
+	const diagnoses = [
+		{
+			date: "2023-01-15",
+			title: "Routine Dental Checkup",
+			doctor: "Dentist",
+			medicinesGiven: [],
+			diseasesUncovered: "No significant findings",
+			allergiesUncovered: [],
+			note: "Regular dental examination, no issues detected.",
+		},
+		{
+			date: "2023-02-05",
+			title: "Cardiovascular Health Assessment",
+			doctor: "Cardiologist",
+			medicinesGiven: ["Aspirin (75mg daily)"],
+			diseasesUncovered: "High Blood Pressure",
+			allergiesUncovered: [],
+			note: "Prescribed aspirin for blood pressure management.",
+		},
+		{
+			date: "2023-03-10",
+			title: "Vision and Eye Health Checkup",
+			doctor: "Ophthalmologist",
+			medicinesGiven: ["Eye Drops (for dry eyes)"],
+			diseasesUncovered: "Dry Eyes",
+			allergiesUncovered: [],
+			note: "Advised regular use of eye drops for dry eyes.",
+		},
+		{
+			date: "2023-04-20",
+			title: "Respiratory Function Test",
+			doctor: "Pulmonologist",
+			medicinesGiven: ["Inhaler (as needed)"],
+			diseasesUncovered: "Mild Asthma",
+			allergiesUncovered: ["Dust mites"],
+			note: "Prescribed inhaler for asthma management.",
+		},
+		{
+			date: "2023-05-15",
+			title: "Allergy Testing",
+			doctor: "Allergist",
+			medicinesGiven: ["Antihistamines"],
+			diseasesUncovered: "Allergic Rhinitis",
+			allergiesUncovered: ["Pollen", "Pet Dander"],
+			note: "Prescribed antihistamines for allergy relief.",
+		},
+		{
+			date: "2023-06-08",
+			title: "Diabetes Screening",
+			doctor: "Endocrinologist",
+			medicinesGiven: ["Metformin (500mg daily)"],
+			diseasesUncovered: "Type 2 Diabetes",
+			allergiesUncovered: [],
+			note: "Initiated treatment for diabetes with Metformin.",
+		},
+		{
+			date: "2023-07-12",
+			title: "Skin Allergy Consultation",
+			doctor: "Dermatologist",
+			medicinesGiven: ["Topical Steroid Cream"],
+			diseasesUncovered: "Eczema",
+			allergiesUncovered: ["Nickel allergy"],
+			note: "Prescribed a steroid cream for eczema management.",
+		},
+		{
+			date: "2023-08-18",
+			title: "Gastrointestinal Checkup",
+			doctor: "Gastroenterologist",
+			medicinesGiven: ["Proton Pump Inhibitor"],
+			diseasesUncovered: "Acid Reflux",
+			allergiesUncovered: [],
+			note: "Prescribed medication for acid reflux.",
+		},
+		{
+			date: "2023-09-25",
+			title: "Mental Health Assessment",
+			doctor: "Psychologist",
+			medicinesGiven: ["Antidepressant (as needed)"],
+			diseasesUncovered: "Generalized Anxiety Disorder",
+			allergiesUncovered: [],
+			note: "Recommended therapy and prescribed antidepressant.",
+		},
+		{
+			date: "2023-10-30",
+			title: "Joint Pain Evaluation",
+			doctor: "Rheumatologist",
+			medicinesGiven: ["Nonsteroidal Anti-Inflammatory Drug (NSAID)"],
+			diseasesUncovered: "Osteoarthritis",
+			allergiesUncovered: [],
+			note: "Prescribed NSAID for joint pain management.",
+		},
+	];
 
 	return (
-		<div className="container mx-auto my-4 px-2">
-			<div className="grid grid-cols-12 gap-4 mb-8">
-				<div className="bg-green-100 col-span-12 lg:col-span-12 flex flex-col gap-2 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Welcome back!</span>
-					<span className="text-xl">
-						Your patients are all on schedule this week.
-					</span>
-					<div>
-						<button className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">
-							Learn more
-						</button>
-					</div>
-				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Living Room</span>
-					<span className="text-xl font-bold">450Wh</span>
-				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Bedroom</span>
-					<span className="text-xl font-bold">230Wh</span>
-				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Kids Room</span>
-					<span className="text-xl font-bold">310Wh</span>
-				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Kitchen</span>
-					<span className="text-xl font-bold">840Wh</span>
-				</div>
-				<div className="col-span-12 lg:col-span-4 lg:row-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					{/* <span className="text-xl font-semibold">Welcome Annie</span> */}
-					<span className="text-xl font-semibold">My devices</span>
-					{/* <span className="text-xl font-bold">201kWh</span> */}
+		<div className="p-8">
+			<h3 className="text-xl text-center font-bold">
+				{faker.person.fullName()}
+			</h3>
+			<div className="py-4 flex flex-col gap-2">
+				<p className="w-full p-3 border">
+					<strong>Birthdate:</strong> {faker.date.anytime().toDateString()}
+				</p>
+				<p className="w-full p-3 border">
+					<strong>Phone Number:</strong> {faker.phone.number()}
+				</p>
+				<p className="w-full p-3 border">
+					<strong>Responsable Phone Number:</strong> {faker.phone.number()}
+				</p>
+				<p className="w-full p-3 border">
+					<strong>Gender:</strong> {faker.person.gender()}
+				</p>
+				<p className="w-full p-3 border">
+					<strong>Email:</strong> {faker.internet.email()}
+				</p>
+			</div>
 
-					<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-						<div>AC</div>
-						<div>Router</div>
-						<div>Music System</div>
-						<div>Lamps</div>
-					</div>
-				</div>
-
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Temperature</span>
-					<span className="text-xl font-bold">+25c</span>
-				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Humidity</span>
-					<span className="text-xl font-bold">30%</span>
-				</div>
-				<div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Light Intensity</span>
-					<span className="text-xl font-bold">{intensity}%</span>
+			<div className="MED">
+				<h3 className="text-center mb-4 text-xl">Medicine</h3>
+				<div className="flex gap-4 justify-center flex-col items-center">
 					<input
-						type="range"
-						min="1"
-						max="100"
-						value={intensity}
-						onChange={(e) => setIntensity(e.target.value)}
+						type="text"
+						placeholder="Medicine Name"
+						className="w-full p-3 border"
 					/>
+					{/* <input type="time" placeholder='Medicine Time' /> */}
+					<div className="check flex gap-4 justify-center">
+						<input type="checkbox" />
+						<p>Morning</p>
+						<input type="checkbox" />
+						<p>Midday</p>
+						<input type="checkbox" />
+						<p>Evening</p>
+					</div>
+					<input
+						className="w-full p-3 border"
+						type="number"
+						placeholder="Quantity per dosage"
+					/>
+					<input
+						type="text"
+						className="w-full p-3 border"
+						placeholder="Notes"
+					/>
+					{/* <button>+</button> */}
 				</div>
-
-				{/* <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<div className="flex flex-col gap-2">
-						<span className="text-xl font-semibold">Active user ages</span>
-					</div>
-
-					<Chart
-						className="text-white"
-						options={{
-							theme: {
-								mode: "light",
-							},
-							chart: {
-								// width: 380,
-								// height: 680,
-								type: "donut",
-								fontFamily: "Poppins",
-							},
-							dataLabels: {
-								enabled: false,
-							},
-							responsive: [
-								{
-									breakpoint: 480,
-									options: {
-										chart: {
-											// width: 200,
-										},
-										legend: {
-											show: true,
-											height: 50,
-										},
-									},
-								},
-							],
-							legend: {
-								position: "bottom",
-								// offsetY: 0,
-								height: 50,
-							},
-						}}
-						series={[44, 55, 13, 33]}
-						type="donut"
-						// width="500"
-						// height="600"
-					/>
-				</div> */}
-
-				<div className="col-span-12 lg:col-span-12 flex flex-col gap-4 p-4 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<div className="flex flex-col gap-2">
-						<span className="text-xl font-semibold">Spending</span>
-					</div>
-					<Chart
-						className=""
-						options={{
-							chart: {
-								height: 350,
-								type: "area",
-							},
-							dataLabels: {
-								enabled: false,
-							},
-							stroke: {
-								curve: "smooth",
-							},
-							xaxis: {
-								type: "datetime",
-								categories: [
-									"2018-09-19T00:00:00.000Z",
-									"2018-09-19T01:30:00.000Z",
-									"2018-09-19T02:30:00.000Z",
-									"2018-09-19T03:30:00.000Z",
-									"2018-09-19T04:30:00.000Z",
-									"2018-09-19T05:30:00.000Z",
-									"2018-09-19T06:30:00.000Z",
-								],
-							},
-							tooltip: {
-								x: {
-									format: "dd/MM/yy HH:mm",
-								},
-							},
-						}}
-						series={[
-							{
-								name: "Monday",
-								data: [31, 40, 28, 51, 42, 109, 100],
-							},
-							{
-								name: "Tuesday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Wednesday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Thursday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Friday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Saturday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Sunday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-						]}
-						type="line"
-						height="400"
-						// width="500"
-					/>
+			</div>
+			<div className="mt-8">
+				<h3 className="text-xl text-center font-bold">Medical Record</h3>
+				<div>
+					{diagnoses.map((diagnosis, index) => (
+						<div key={index} className="py-4 flex flex-col gap-2">
+							<h3 className="titlee mb-2 text-lg font-semibold">
+								{diagnosis.title}
+							</h3>
+							<p className="w-full p-3 border">
+								<strong>Date:</strong> {diagnosis.date}
+							</p>
+							<p className="w-full p-3 border">
+								<strong>Doctor:</strong> {diagnosis.doctor}
+							</p>
+							<p className="w-full p-3 border">
+								<strong>Medicines Given:</strong>{" "}
+								{diagnosis.medicinesGiven.join(", ") || "None"}
+							</p>
+							<p className="w-full p-3 border">
+								<strong>Diseases Uncovered:</strong>{" "}
+								{diagnosis.diseasesUncovered}
+							</p>
+							<p className="w-full p-3 border">
+								<strong>Allergies Uncovered:</strong>{" "}
+								{diagnosis.allergiesUncovered.join(", ") || "None"}
+							</p>
+							<p className="w-full p-3 border">
+								<strong>Note:</strong> {diagnosis.note}
+							</p>
+						</div>
+					))}
 				</div>
 			</div>
 		</div>
 	);
 };
-
-export default Home;
