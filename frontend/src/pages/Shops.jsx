@@ -7,7 +7,7 @@ export default function Shops() {
 	const [shops, setShops] = useState([
 		{
 			_id: "638fd4ea05859e72995ac03d",
-			name: "Samsung Fridge",
+			name: "Ahmed Kahloun",
 			address: "250Wh",
 			contactNumber: "ezfz",
 			createdAt: "2022-12-06T23:48:58.732Z",
@@ -17,7 +17,7 @@ export default function Shops() {
 		},
 		{
 			_id: "638fd4e605859e72995ac036",
-			name: "DLink Router",
+			name: "John Doe",
 			address: "10Wh",
 			contactNumber: "fzef",
 			createdAt: "2022-12-06T23:48:54.024Z",
@@ -27,7 +27,7 @@ export default function Shops() {
 		},
 		{
 			_id: "638fd4e305859e72995ac033",
-			name: "Xiaomi TV",
+			name: "Limmy Show",
 			address: "250Wh",
 			contactNumber: "fzef",
 			createdAt: "2022-12-06T23:48:51.468Z",
@@ -38,7 +38,7 @@ export default function Shops() {
 		},
 		{
 			_id: "638fd34095e812729b29ef55",
-			name: "Heating System",
+			name: "Tony Stark",
 			address: "2900Wh",
 			contactNumber: "rgdazd",
 			pic: "https://www.thespruce.com/thmb/uCAFtGxJOnWHGnTQih67o7rMO3g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-types-of-air-conditioning-systems-work-1824734-hero-740003052ebb4bebb5dd9b42e441c118.jpg",
@@ -48,7 +48,7 @@ export default function Shops() {
 		},
 		{
 			_id: "638fd32195e812729b29ef52",
-			name: "Security Camera",
+			name: "Johnny Cash",
 			address: "10Wh",
 			pic: "https://www.gensecurity.com/hubfs/Blog/White%20male%20adjusting%20smart%20camera%20and%20monitoring%20camera%20on%20his%20phone%20on%20the%20couch.jpg",
 			contactNumber: "rg",
@@ -83,10 +83,10 @@ export default function Shops() {
 			<div className="grid grid-cols-12 gap-4 mb-8">
 				<div className="col-span-12 lg:col-span-12 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<div className="flex flex-wrap justify-between">
-						<span className="text-xl font-semibold">My Devices</span>
+						<span className="text-xl font-semibold">My Patients</span>
 						<Link to="/add-device">
 							<button className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">
-								Add a device
+								Add a patient
 							</button>
 						</Link>
 					</div>

@@ -7,6 +7,7 @@ import DonationDetails from "../components/DonationDetails";
 import DonationForm from "../components/DonationForm";
 import Chart from "react-apexcharts";
 import ShopsList from "../components/ShopsList";
+import { faker } from "@faker-js/faker";
 
 const Home = () => {
 	const [donations, setDonations] = useState([]);
@@ -36,7 +37,7 @@ const Home = () => {
 				<div className="bg-green-100 col-span-12 lg:col-span-12 flex flex-col gap-2 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<span className="text-xl font-semibold">Welcome back!</span>
 					<span className="text-xl">
-						Your energy consumption is operating at optimal levels.
+						Your patients are all on schedule this week.
 					</span>
 					<div>
 						<button className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">
@@ -44,53 +45,111 @@ const Home = () => {
 						</button>
 					</div>
 				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Living Room</span>
-					<span className="text-xl font-bold">450Wh</span>
+				<div className="col-span-12 lg:col-span-3 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Total Patients</span>
+					<span className="text-xl font-bold">90</span>
 				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Bedroom</span>
-					<span className="text-xl font-bold">230Wh</span>
+				<div className="col-span-12 lg:col-span-3 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Weekly Appointments</span>
+					<span className="text-xl font-bold">60</span>
 				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Kids Room</span>
-					<span className="text-xl font-bold">310Wh</span>
+				<div className="col-span-12 lg:col-span-3 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Prescriptions</span>
+					<span className="text-xl font-bold">40</span>
 				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Kitchen</span>
-					<span className="text-xl font-bold">840Wh</span>
+				<div className="col-span-12 lg:col-span-3 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					<span className="text-xl font-semibold">Canceled Appointments</span>
+					<span className="text-xl font-bold">4</span>
 				</div>
-				<div className="col-span-12 lg:col-span-4 lg:row-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+
+				<div className="col-span-12 lg:col-span-5 lg:row-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					{/* <span className="text-xl font-semibold">Welcome Annie</span> */}
-					<span className="text-xl font-semibold">My devices</span>
+					<span className="text-xl font-semibold">Patients</span>
 					{/* <span className="text-xl font-bold">201kWh</span> */}
 
-					<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-						<div>AC</div>
-						<div>Router</div>
-						<div>Music System</div>
-						<div>Lamps</div>
+					{/* <div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md"> */}
+					<div className="flex items-center justify-between">
+						<div>
+							<div>{faker.person.firstName()}</div>
+							<div>3 hours ago</div>
+						</div>
+						<div>Above normal peak</div>
+						<div>140 BPM</div>
 					</div>
+					<div className="flex items-center justify-between">
+						<div>
+							<div>{faker.person.firstName()}</div>
+							<div>3 hours ago</div>
+						</div>
+						<div>Above normal peak</div>
+						<div>140 BPM</div>
+					</div>
+					<div className="flex items-center justify-between">
+						<div>
+							<div>{faker.person.firstName()}</div>
+							<div>3 hours ago</div>
+						</div>
+						<div>Above normal peak</div>
+						<div>140 BPM</div>
+					</div>
+					{/* </div> */}
 				</div>
 
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Temperature</span>
-					<span className="text-xl font-bold">+25c</span>
-				</div>
-				<div className="col-span-12 lg:col-span-2 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Humidity</span>
-					<span className="text-xl font-bold">30%</span>
-				</div>
-				<div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
-					<span className="text-xl font-semibold">Light Intensity</span>
-					<span className="text-xl font-bold">{intensity}%</span>
-					<input
-						type="range"
-						min="1"
-						max="100"
-						value={intensity}
-						onChange={(e) => setIntensity(e.target.value)}
-					/>
+				<div className="col-span-12 justify-between lg:col-span-7 flex gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
+					{[1, 1, 1].map((e) => (
+						<div className="flex flex-col gap-2">
+							<div className="font-bold">{faker.person.firstName()}</div>
+							<div>ID: ozrhgnre</div>
+							<div className="w-full h-[1px] bg-gray-300"></div>
+							<div>{faker.phone.number()}</div>
+							<div className=" flex justify-between">
+								<div>
+									Heart rate:{" "}
+									{faker.number.int({
+										min: 60,
+										max: 120,
+									})}
+								</div>
+							</div>
+							<div className=" flex justify-between">
+								<div>
+									Blood pressure:{" "}
+									{faker.number.int({
+										min: 60,
+										max: 120,
+									})}
+								</div>
+							</div>
+							<div className=" flex justify-between">
+								<div>
+									Temperature:{" "}
+									{faker.number.int({
+										min: 60,
+										max: 120,
+									})}
+								</div>
+							</div>
+							<div className=" flex justify-between">
+								<div>
+									SpO2:{" "}
+									{faker.number.int({
+										min: 60,
+										max: 120,
+									})}
+								</div>
+							</div>
+							<div className="w-full h-[1px] bg-gray-300"></div>
+							<div className=" flex justify-between">
+								<div>
+									Today:{" "}
+									{faker.number.int({
+										min: 60,
+										max: 120,
+									})}
+								</div>
+							</div>
+						</div>
+					))}
 				</div>
 
 				{/* <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
@@ -142,7 +201,7 @@ const Home = () => {
 
 				<div className="col-span-12 lg:col-span-12 flex flex-col gap-4 p-4 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md shadow-md">
 					<div className="flex flex-col gap-2">
-						<span className="text-xl font-semibold">Spending</span>
+						<span className="text-xl font-semibold">Treated Patients</span>
 					</div>
 					<Chart
 						className=""
@@ -158,15 +217,13 @@ const Home = () => {
 								curve: "smooth",
 							},
 							xaxis: {
-								type: "datetime",
+								type: "category",
 								categories: [
-									"2018-09-19T00:00:00.000Z",
-									"2018-09-19T01:30:00.000Z",
-									"2018-09-19T02:30:00.000Z",
-									"2018-09-19T03:30:00.000Z",
-									"2018-09-19T04:30:00.000Z",
-									"2018-09-19T05:30:00.000Z",
-									"2018-09-19T06:30:00.000Z",
+									"Monday",
+									"Tuesday",
+									"Wednesday",
+									"Thursday",
+									"Friday",
 								],
 							},
 							tooltip: {
@@ -177,32 +234,8 @@ const Home = () => {
 						}}
 						series={[
 							{
-								name: "Monday",
-								data: [31, 40, 28, 51, 42, 109, 100],
-							},
-							{
-								name: "Tuesday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Wednesday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Thursday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Friday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Saturday",
-								data: [11, 32, 45, 32, 34, 52, 41],
-							},
-							{
-								name: "Sunday",
-								data: [11, 32, 45, 32, 34, 52, 41],
+								name: "Patients",
+								data: [10, 12, 11, 14, 20],
 							},
 						]}
 						type="line"

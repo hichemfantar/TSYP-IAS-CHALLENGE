@@ -1,4 +1,5 @@
 import React from "react";
+import { faker } from "@faker-js/faker";
 
 export default function ShopsList({
 	name,
@@ -7,7 +8,6 @@ export default function ShopsList({
 	className,
 	pic,
 }) {
-	console.log(pic);
 	return (
 		<div
 			className={`w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ${className}`}
@@ -66,16 +66,26 @@ export default function ShopsList({
 				<img
 					className="w-60 h-60 mb-3 rounded-md shadow-lg object-cover"
 					src={
+						"https://randomuser.me/api/portraits/women/" +
+							(Math.floor(Math.random() * (40 - 1 + 1)) + 1) +
+							".jpg" ||
 						pic ||
 						"https://www.cnet.com/a/img/resize/2d2e0487bdd32b0892ba5538b1b1219ba72f5be0/hub/2016/10/27/a11c03cc-bc86-427c-b200-fa5c9f4e2f20/lginstaviewproductphotos-8.jpg?auto=webp&width=1200"
 					}
 					alt="shop"
 				/>
-				<h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-					{name}
+				<h5 className="text-center mb-1 text-xl font-medium text-gray-900 dark:text-white">
+					{faker.person.fullName({
+						sex: "female",
+					})}
 				</h5>
 				<span className="text-sm text-gray-500 dark:text-gray-400">
-					{address || "474 Boston Post Rd, North Windham"}
+					{Math.floor(Math.random() * (40 - 20 + 1)) + 20 + " YO" ||
+						address ||
+						"474 Boston Post Rd, North Windham"}
+				</span>
+				<span className="text-sm text-gray-500 dark:text-gray-400">
+					{faker.person.gender()}
 				</span>
 				{/* <span className="text-sm text-gray-500 dark:text-gray-400">
 					{contactNumber || "474 Boston Post Rd, North Windham"}
